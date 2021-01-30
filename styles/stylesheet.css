@@ -1,0 +1,105 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 950px;
+    height: 510px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.card__left {
+    overflow: hidden;
+    padding-top: 80px;
+    background-image: url(/accordion-card/images/bg-pattern-desktop.svg);
+    background-position: top -280px left -500px;
+    background-repeat: no-repeat;
+}
+
+
+.card__content {
+    padding: 50px;
+    grid-column: 2 / 3;
+    font-size: 12px;
+}
+
+.card__content h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.clip__img {
+    position: relative;
+    left: -85px;
+    top: -15px;
+
+}
+
+.float__img {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    left: 18vw;
+    top: 45vh;
+}
+
+.accordion {
+    display: flex;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.85rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    
+}
+
+
+button {
+    position: relative;
+    padding: 10px 0;
+}
+
+.active, .accordion:hover {
+    color: hsl(14, 88%, 65%);
+   
+}
+.active {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+.panel {
+    display: none;
+    margin-top: 10px;
+    overflow:hidden;
+    font-weight: 400;
+    padding-bottom: 10px;
+    line-height: 1.2rem;
+    color: hsl(0, 0%, 42%);
+}
+
+.divider {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.accordion__arrow {
+    position: absolute;
+    top: 20px;
+    right: 1px;
+}
